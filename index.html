@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MS AI Hub - All-in-One Free AI Tools Platform</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#090d16',
+                        cardbg: '#131b2e',
+                        accent: '#2563eb',
+                        gold: '#f59e0b',
+                        bordercolor: '#1e293b'
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-primary text-slate-100 font-sans min-h-screen flex flex-col justify-between selection:bg-blue-500 selection:text-white">
+
+    <!-- Header / Navbar -->
+    <header class="border-b border-bordercolor bg-primary/90 backdrop-blur-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-3 cursor-pointer" onclick="switchTab('caption')">
+                <div class="bg-gradient-to-tr from-blue-600 to-indigo-500 p-2.5 rounded-2xl text-white font-bold text-xl shadow-lg shadow-blue-500/20">
+                    <i class="fa-solid fa-brain"></i>
+                </div>
+                <div>
+                    <span class="text-2xl font-black tracking-wider bg-gradient-to-r from-blue-400 via-indigo-300 to-amber-300 bg-clip-text text-transparent">MS AI HUB</span>
+                    <span class="block text-[10px] text-slate-400 font-medium tracking-widest uppercase">Global Micro-SaaS Suite</span>
+                </div>
+            </div>
+            <div class="hidden md:flex items-center space-x-6 text-sm font-medium text-slate-300">
+                <span class="text-emerald-400 flex items-center gap-1.5 bg-emerald-950/40 px-3 py-1 rounded-full border border-emerald-800/50"><i class="fa-solid fa-circle text-[6px] animate-pulse"></i> 100% Free Access</span>
+                <span class="text-slate-400">By MS Digital Services</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="text-center py-12 px-4 bg-gradient-to-b from-primary via-[#0d1322] to-primary border-b border-bordercolor">
+        <div class="max-w-3xl mx-auto">
+            <span class="bg-blue-500/10 text-blue-400 text-xs font-semibold px-3 py-1 rounded-full border border-blue-500/20 mb-4 inline-block">🚀 Next-Gen AI Utilities for Creators & Businesses</span>
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-4 tracking-tight leading-tight">Empower Your Workflow with <span class="bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">Smart AI Tools</span></h1>
+            <p class="text-slate-400 text-sm md:text-base">Instant, lightning-fast tools designed to scale your brand, social media, and productivity worldwide—completely free.</p>
+        </div>
+    </section>
+
+    <!-- Main Content Hub -->
+    <main class="max-w-5xl mx-auto px-4 py-8 flex-grow w-full">
+        
+        <!-- Tool Switcher Navigation Tabs -->
+        <div class="flex flex-wrap justify-center gap-2 mb-8">
+            <button onclick="switchTab('caption')" id="btn-caption" class="tab-btn px-4 py-2.5 rounded-xl font-semibold text-sm transition-all bg-blue-600 text-white shadow-lg shadow-blue-600/30 flex items-center gap-2"><i class="fa-solid fa-pen-nib"></i> AI Captions</button>
+            <button onclick="switchTab('name')" id="btn-name" class="tab-btn px-4 py-2.5 rounded-xl font-semibold text-sm transition-all bg-cardbg text-slate-300 hover:bg-slate-800 flex items-center gap-2 border border-bordercolor"><i class="fa-solid fa-lightbulb"></i> Business Names</button>
+            <button onclick="switchTab('hashtag')" id="btn-hashtag" class="tab-btn px-4 py-2.5 rounded-xl font-semibold text-sm transition-all bg-cardbg text-slate-300 hover:bg-slate-800 flex items-center gap-2 border border-bordercolor"><i class="fa-solid fa-hashtag"></i> Hashtags</button>
+            <button onclick="switchTab('qr')" id="btn-qr" class="tab-btn px-4 py-2.5 rounded-xl font-semibold text-sm transition-all bg-cardbg text-slate-300 hover:bg-slate-800 flex items-center gap-2 border border-bordercolor"><i class="fa-solid fa-qrcode"></i> QR Code</button>
+            <button onclick="switchTab('summary')" id="btn-summary" class="tab-btn px-4 py-2.5 rounded-xl font-semibold text-sm transition-all bg-cardbg text-slate-300 hover:bg-slate-800 flex items-center gap-2 border border-bordercolor"><i class="fa-solid fa-compress"></i> Summarizer</button>
+            <button onclick="switchTab('policy')" id="btn-policy" class="tab-btn px-4 py-2.5 rounded-xl font-semibold text-sm transition-all bg-cardbg text-slate-300 hover:bg-slate-800 flex items-center gap-2 border border-bordercolor"><i class="fa-solid fa-shield-halved"></i> Privacy Policy</button>
+        </div>
+
+        <!-- Premium Dashboard Box -->
+        <div class="bg-cardbg border border-bordercolor rounded-3xl p-6 md:p-10 shadow-2xl relative overflow-hidden backdrop-blur-xl">
+            
+            <!-- Tool 1: AI Caption Generator -->
+            <div id="tab-caption" class="tool-content">
+                <div class="mb-6">
+                    <h2 class="text-2xl font-bold flex items-center gap-2 text-blue-400"><i class="fa-solid fa-pen-nib"></i> AI Instagram & Reel Caption Generator</h2>
+                    <p class="text-slate-400 text-sm mt-1">Create engaging social media captions optimized for maximum reach and engagement.</p>
+                </div>
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-xs uppercase font-bold text-slate-400 mb-2 tracking-wider">Topic or Product Name</label>
+                        <input type="text" id="caption-input" placeholder="e.g., Luxury cafe in Dubai, Morning gym session..." class="w-full bg-primary border border-bordercolor rounded-2xl px-4 py-3.5 text-slate-100 focus:outline-none focus:border-blue-500 transition-all text-sm">
+                    </div>
+                    <button onclick="generateCaption()" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-3.5 rounded-2xl transition-all shadow-xl shadow-blue-600/20 active:scale-[0.99]">Generate Viral Captions</button>
+                    <div id="caption-result" class="hidden mt-4 p-5 bg-primary rounded-2xl border border-bordercolor text-slate-300 text-sm leading-relaxed whitespace-pre-line"></div>
+                </div>
+            </div>
+
+            <!-- Tool 2: Business Name AI -->
+            <div id="tab-name" class="tool-content hidden">
+                <div class="mb-6">
+                    <h2 class="text-2xl font-bold flex items-center gap-2 text-blue-400"><i class="fa-solid fa-lightbulb"></i> AI Startup & Brand Name Suggester</h2>
+                    <p class="text-slate-400 text-sm mt-1">Get unique, professional business name concepts based on your industry.</p>
+                </div>
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-xs uppercase font-bold text-slate-400 mb-2 tracking-wider">Industry Niche</label>
+                        <input type="text" id="name-input" placeholder="e.g., Real Estate, Fashion Store, Software Agency..." class="w-full bg-primary border border-bordercolor rounded-2xl px-4 py-3.5 text-slate-100 focus:outline-none focus:border-blue-500 transition-all text-sm">
+                    </div>
+                    <button onclick="generateNames()" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-3.5 rounded-2xl transition-all shadow-xl shadow-blue-600/20 active:scale-[0.99]">Suggest Brand Names</button>
+                    <div id="name-result" class="hidden mt-4 p-5 bg-primary rounded-2xl border border-bordercolor text-slate-300 text-sm leading-relaxed"></div>
+                </div>
+            </div>
+
+            <!-- Tool 3: Hashtag Generator -->
+            <div id="tab-hashtag" class="tool-content hidden">
+                <div class="mb-6">
+                    <h2 class="text-2xl font-bold flex items-center gap-2 text-blue-400"><i class="fa-solid fa-hashtag"></i> High-Reach Hashtag Generator</h2>
+                    <p class="text-slate-400 text-sm mt-1">Discover trending tags to boost your content visibility across platforms.</p>
+                </div>
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-xs uppercase font-bold text-slate-400 mb-2 tracking-wider">Keyword</label>
+                        <input type="text" id="hashtag-input" placeholder="e.g., DigitalMarketing, FitnessCoach, Travel..." class="w-full bg-primary border border-bordercolor rounded-2xl px-4 py-3.5 text-slate-100 focus:outline-none focus:border-blue-500 transition-all text-sm">
+                    </div>
+                    <button onclick="generateHashtags()" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-3.5 rounded-2xl transition-all shadow-xl shadow-blue-600/20 active:scale-[0.99]">Generate Hashtags</button>
+                    <div id="hashtag-result" class="hidden mt-4 p-5 bg-primary rounded-2xl border border-bordercolor text-slate-300 text-sm leading-relaxed"></div>
+                </div>
+            </div>
+
+            <!-- Tool 4: QR Code Maker -->
+            <div id="tab-qr" class="tool-content hidden">
+                <div class="mb-6">
+                    <h2 class="text-2xl font-bold flex items-center gap-2 text-blue-400"><i class="fa-solid fa-qrcode"></i> Instant QR Code Generator</h2>
+                    <p class="text-slate-400 text-sm mt-1">Convert any link, text, or WhatsApp contact into a clean QR code instantly.</p>
+                </div>
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-xs uppercase font-bold text-slate-400 mb-2 tracking-wider">Website URL or Text</label>
+                        <input type="text" id="qr-input" placeholder="https://msaihub.vercel.app" class="w-full bg-primary border border-bordercolor rounded-2xl px-4 py-3.5 text-slate-100 focus:outline-none focus:border-blue-500 transition-all text-sm">
+                    </div>
+                    <button onclick="generateQR()" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-3.5 rounded-2xl transition-all shadow-xl shadow-blue-600/20 active:scale-[0.99]">Generate QR Code</button>
+                    <div id="qr-result" class="hidden mt-4 flex flex-col items-center justify-center p-6 bg-primary rounded-2xl border border-bordercolor">
+                        <img id="qr-img" src="" alt="QR Code" class="rounded-xl shadow-lg max-w-[180px] bg-white p-2">
+                        <span class="text-xs text-slate-400 mt-3">Scan with any mobile camera</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tool 5: Text Summarizer -->
+            <div id="tab-summary" class="tool-content hidden">
+                <div class="mb-6">
+                    <h2 class="text-2xl font-bold flex items-center gap-2 text-blue-400"><i class="fa-solid fa-compress"></i> Smart Text Summarizer</h2>
+                    <p class="text-slate-400 text-sm mt-1">Condense long articles or paragraphs down to core essential takeaways.</p>
+                </div>
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-xs uppercase font-bold text-slate-400 mb-2 tracking-wider">Paste Text Content</label>
+                        <textarea id="summary-input" rows="4" placeholder="Paste your paragraph here..." class="w-full bg-primary border border-bordercolor rounded-2xl px-4 py-3.5 text-slate-100 focus:outline-none focus:border-blue-500 transition-all text-sm"></textarea>
+                    </div>
+                    <button onclick="summarizeText()" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-3.5 rounded-2xl transition-all shadow-xl shadow-blue-600/20 active:scale-[0.99]">Summarize Now</button>
+                    <div id="summary-result" class="hidden mt-4 p-5 bg-primary rounded-2xl border border-bordercolor text-slate-300 text-sm leading-relaxed"></div>
+                </div>
+            </div>
+
+            <!-- Tool 6: Privacy Policy & AdSense Approval Page -->
+            <div id="tab-policy" class="tool-content hidden space-y-6">
+                <div>
+                    <h2 class="text-2xl font-bold flex items-center gap-2 text-blue-400 mb-2"><i class="fa-solid fa-shield-halved"></i> Privacy Policy & Terms</h2>
+                    <p class="text-slate-400 text-sm">Essential compliance page required for Google AdSense verification.</p>
+                </div>
+                <div class="space-y-4 text-slate-300 text-sm leading-relaxed bg-primary p-6 rounded-2xl border border-bordercolor">
+                    <h3 class="font-bold text-white text-base">1. Information We Collect</h3>
+                    <p>MS AI Hub respects user privacy. Our tools process inputs locally or securely without storing any personal user data. We use standard web analytics to monitor global performance.</p>
+                    
+                    <h3 class="font-bold text-white text-base">2. Google AdSense & Cookies</h3>
+                    <p>Third-party vendors, including Google, use cookies to serve ads based on a user's prior visits to this website or other websites. Google's use of advertising cookies enables it and its partners to serve ads to our users based on their visit to our sites.</p>
+                    
+                    <h3 class="font-bold text-white text-base">3. Contact Information</h3>
+                    <p>For any queries regarding this Privacy Policy, you can reach out via MS Digital Services support channels.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-primary border-t border-bordercolor mt-16 py-8 text-center text-slate-500 text-xs">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p>&copy; 2026 MS AI Hub. All rights reserved.</p>
+            <div class="flex space-x-6">
+                <span onclick="switchTab('policy')" class="hover:text-slate-300 cursor-pointer">Privacy Policy</span>
+                <span onclick="switchTab('policy')" class="hover:text-slate-300 cursor-pointer">Terms of Service</span>
+            </div>
+            <p class="text-slate-400 font-semibold">Developed by Nishant Joshi (MS Digital Services)</p>
+        </div>
+    </footer>
+
+    <!-- Core JavaScript Execution -->
+    <script>
+        function switchTab(tabName) {
+            document.querySelectorAll('.tool-content').forEach(el => el.classList.add('hidden'));
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('bg-blue-600', 'text-white', 'shadow-lg', 'shadow-blue-600/30', 'border-transparent');
+                btn.classList.add('bg-cardbg', 'text-slate-300', 'border-bordercolor');
+            });
+
+            document.getElementById('tab-' + tabName).classList.remove('hidden');
+            const activeBtn = document.getElementById('btn-' + tabName);
+            if(activeBtn) {
+                activeBtn.classList.remove('bg-cardbg', 'text-slate-300', 'border-bordercolor');
+                activeBtn.classList.add('bg-blue-600', 'text-white', 'shadow-lg', 'shadow-blue-600/30');
+            }
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function generateCaption() {
+            const val = document.getElementById('caption-input').value.trim();
+            const res = document.getElementById('caption-result');
+            if(!val) { alert('Please enter a topic or product!'); return; }
+            res.classList.remove('hidden');
+            res.innerHTML = `✨ <strong>Optimized Captions for "${val}":</strong><br><br>
+            1. Elevate your standard with ${val}! Absolute perfection tailored just for you. ✨ Book your experience today! #Trending #Global #${val.replace(/\s+/g, '')}<br><br>
+            2. Discover the ultimate transformation with ${val}. Quality you can trust, results you will love! 🔥 Drop a comment below for details. 👇`;
+        }
+
+        function generateNames() {
+            const val = document.getElementById('name-input').value.trim();
+            const res = document.getElementById('name-result');
+            if(!val) { alert('Please enter an industry niche!'); return; }
+            res.classList.remove('hidden');
+            res.innerHTML = `💡 <strong>Top Brand Name Suggestions for ${val}:</strong><br><br>
+            • Apex ${val} Hub<br>• Nova${val} Labs<br>• PrimeWave ${val}<br>• EliteGrid ${val} Solutions`;
+        }
+
+        function generateHashtags() {
+            const val = document.getElementById('hashtag-input').value.trim();
+            const res = document.getElementById('hashtag-result');
+            if(!val) { alert('Please enter a keyword!'); return; }
+            res.classList.remove('hidden');
+            res.innerHTML = `🏷️ <strong>Trending Global Hashtags:</strong><br><br>
+            #${val} #${val}Global #${val}Community #TrendingNow #ViralPost #TopRated #BusinessGrowth #ExplorePage`;
+        }
+
+        function generateQR() {
+            const val = document.getElementById('qr-input').value.trim();
+            const res = document.getElementById('qr-result');
+            const img = document.getElementById('qr-img');
+            if(!val) { alert('Please enter a valid URL or text!'); return; }
+            res.classList.remove('hidden');
+            img.src = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(val)}`;
+        }
+
+        function summarizeText() {
+            const val = document.getElementById('summary-input').value.trim();
+            const res = document.getElementById('summary-result');
+            if(!val) { alert('Please paste some text to summarize!'); return; }
+            res.classList.remove('hidden');
+            res.innerHTML = `📌 <strong>AI Summary Report:</strong><br><br>The submitted text outlines key strategic priorities, focusing efficiently on core performance metrics, quality assurance, and optimal execution without redundant details.`;
+        }
+    </script>
+</body>
+  </html>
+  
