@@ -45,25 +45,28 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="text-center py-12 px-4 bg-gradient-to-b from-primary via-[#0d1322] to-primary border-b border-bordercolor">
+    <section class="text-center py-10 px-4 bg-gradient-to-b from-primary via-[#0d1322] to-primary border-b border-bordercolor">
         <div class="max-w-3xl mx-auto">
-            <span class="bg-blue-500/10 text-blue-400 text-xs font-semibold px-3 py-1 rounded-full border border-blue-500/20 mb-4 inline-block">🚀 Next-Gen AI Utilities for Creators & Businesses</span>
-            <h1 class="text-4xl md:text-6xl font-extrabold mb-4 tracking-tight leading-tight">Empower Your Workflow with <span class="bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">Smart AI Tools</span></h1>
-            <p class="text-slate-400 text-sm md:text-base">Instant, lightning-fast tools designed to scale your brand, social media, and productivity worldwide—completely free.</p>
+            <span class="bg-blue-500/10 text-blue-400 text-xs font-semibold px-3 py-1 rounded-full border border-blue-500/20 mb-4 inline-block">🚀 Ultimate AI Suite for Creators, Devs & Businesses</span>
+            <h1 class="text-3xl md:text-5xl font-extrabold mb-3 tracking-tight leading-tight">Supercharge Your Work with <span class="bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">All AI Tools</span></h1>
+            <p class="text-slate-400 text-sm md:text-base">Access viral captions, business naming, code fixer, resume review, and QR generation instantly.</p>
         </div>
     </section>
 
     <!-- Main Content Hub -->
     <main class="max-w-5xl mx-auto px-4 py-8 flex-grow w-full">
         
-        <!-- Tool Switcher Navigation Tabs -->
-        <div class="flex flex-wrap justify-center gap-2 mb-8">
-            <button onclick="switchTab('caption')" id="btn-caption" class="tab-btn px-4 py-2.5 rounded-xl font-semibold text-sm transition-all bg-blue-600 text-white shadow-lg shadow-blue-600/30 flex items-center gap-2"><i class="fa-solid fa-pen-nib"></i> AI Captions</button>
-            <button onclick="switchTab('name')" id="btn-name" class="tab-btn px-4 py-2.5 rounded-xl font-semibold text-sm transition-all bg-cardbg text-slate-300 hover:bg-slate-800 flex items-center gap-2 border border-bordercolor"><i class="fa-solid fa-lightbulb"></i> Business Names</button>
-            <button onclick="switchTab('hashtag')" id="btn-hashtag" class="tab-btn px-4 py-2.5 rounded-xl font-semibold text-sm transition-all bg-cardbg text-slate-300 hover:bg-slate-800 flex items-center gap-2 border border-bordercolor"><i class="fa-solid fa-hashtag"></i> Hashtags</button>
-            <button onclick="switchTab('qr')" id="btn-qr" class="tab-btn px-4 py-2.5 rounded-xl font-semibold text-sm transition-all bg-cardbg text-slate-300 hover:bg-slate-800 flex items-center gap-2 border border-bordercolor"><i class="fa-solid fa-qrcode"></i> QR Code</button>
-            <button onclick="switchTab('summary')" id="btn-summary" class="tab-btn px-4 py-2.5 rounded-xl font-semibold text-sm transition-all bg-cardbg text-slate-300 hover:bg-slate-800 flex items-center gap-2 border border-bordercolor"><i class="fa-solid fa-compress"></i> Summarizer</button>
-            <button onclick="switchTab('policy')" id="btn-policy" class="tab-btn px-4 py-2.5 rounded-xl font-semibold text-sm transition-all bg-cardbg text-slate-300 hover:bg-slate-800 flex items-center gap-2 border border-bordercolor"><i class="fa-solid fa-shield-halved"></i> Privacy Policy</button>
+        <!-- Tool Switcher Navigation Tabs (Scrollable on mobile) -->
+        <div class="flex overflow-x-auto pb-3 gap-2 mb-8 no-scrollbar">
+            <button onclick="switchTab('caption')" id="btn-caption" class="tab-btn px-4 py-2.5 rounded-xl font-semibold text-sm transition-all bg-blue-600 text-white shadow-lg shadow-blue-600/30 flex items-center gap-2 whitespace-nowrap"><i class="fa-solid fa-pen-nib"></i> AI Captions</button>
+            <button onclick="switchTab('name')" id="btn-name" class="tab-btn px-4 py-2.5 rounded-xl font-semibold text-sm transition-all bg-cardbg text-slate-300 hover:bg-slate-800 flex items-center gap-2 border border-bordercolor whitespace-nowrap"><i class="fa-solid fa-lightbulb"></i> Business Names</button>
+            <button onclick="switchTab('hashtag')" id="btn-hashtag" class="tab-btn px-4 py-2.5 rounded-xl font-semibold text-sm transition-all bg-cardbg text-slate-300 hover:bg-slate-800 flex items-center gap-2 border border-bordercolor whitespace-nowrap"><i class="fa-solid fa-hashtag"></i> Hashtags</button>
+            <button onclick="switchTab('qr')" id="btn-qr" class="tab-btn px-4 py-2.5 rounded-xl font-semibold text-sm transition-all bg-cardbg text-slate-300 hover:bg-slate-800 flex items-center gap-2 border border-bordercolor whitespace-nowrap"><i class="fa-solid fa-qrcode"></i> QR Code</button>
+            <button onclick="switchTab('summary')" id="btn-summary" class="tab-btn px-4 py-2.5 rounded-xl font-semibold text-sm transition-all bg-cardbg text-slate-300 hover:bg-slate-800 flex items-center gap-2 border border-bordercolor whitespace-nowrap"><i class="fa-solid fa-compress"></i> Summarizer</button>
+            <button onclick="switchTab('resume')" id="btn-resume" class="tab-btn px-4 py-2.5 rounded-xl font-semibold text-sm transition-all bg-cardbg text-slate-300 hover:bg-slate-800 flex items-center gap-2 border border-bordercolor whitespace-nowrap"><i class="fa-solid fa-file-lines"></i> Resume Review</button>
+            <button onclick="switchTab('code')" id="btn-code" class="tab-btn px-4 py-2.5 rounded-xl font-semibold text-sm transition-all bg-cardbg text-slate-300 hover:bg-slate-800 flex items-center gap-2 border border-bordercolor whitespace-nowrap"><i class="fa-solid fa-code"></i> Code Fixer</button>
+            <button onclick="switchTab('prompt')" id="btn-prompt" class="tab-btn px-4 py-2.5 rounded-xl font-semibold text-sm transition-all bg-cardbg text-slate-300 hover:bg-slate-800 flex items-center gap-2 border border-bordercolor whitespace-nowrap"><i class="fa-solid fa-image"></i> Logo Prompts</button>
+            <button onclick="switchTab('policy')" id="btn-policy" class="tab-btn px-4 py-2.5 rounded-xl font-semibold text-sm transition-all bg-cardbg text-slate-300 hover:bg-slate-800 flex items-center gap-2 border border-bordercolor whitespace-nowrap"><i class="fa-solid fa-shield-halved"></i> Privacy Policy</button>
         </div>
 
         <!-- Premium Dashboard Box -->
@@ -73,14 +76,14 @@
             <div id="tab-caption" class="tool-content">
                 <div class="mb-6">
                     <h2 class="text-2xl font-bold flex items-center gap-2 text-blue-400"><i class="fa-solid fa-pen-nib"></i> AI Instagram & Reel Caption Generator</h2>
-                    <p class="text-slate-400 text-sm mt-1">Create engaging social media captions optimized for maximum reach and engagement.</p>
+                    <p class="text-slate-400 text-sm mt-1">Create engaging social media captions optimized for maximum reach.</p>
                 </div>
                 <div class="space-y-4">
                     <div>
                         <label class="block text-xs uppercase font-bold text-slate-400 mb-2 tracking-wider">Topic or Product Name</label>
                         <input type="text" id="caption-input" placeholder="e.g., Luxury cafe in Dubai, Morning gym session..." class="w-full bg-primary border border-bordercolor rounded-2xl px-4 py-3.5 text-slate-100 focus:outline-none focus:border-blue-500 transition-all text-sm">
                     </div>
-                    <button onclick="generateCaption()" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-3.5 rounded-2xl transition-all shadow-xl shadow-blue-600/20 active:scale-[0.99]">Generate Viral Captions</button>
+                    <button onclick="generateCaption()" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-3.5 rounded-2xl transition-all shadow-xl shadow-blue-600/20">Generate Viral Captions</button>
                     <div id="caption-result" class="hidden mt-4 p-5 bg-primary rounded-2xl border border-bordercolor text-slate-300 text-sm leading-relaxed whitespace-pre-line"></div>
                 </div>
             </div>
@@ -96,7 +99,7 @@
                         <label class="block text-xs uppercase font-bold text-slate-400 mb-2 tracking-wider">Industry Niche</label>
                         <input type="text" id="name-input" placeholder="e.g., Real Estate, Fashion Store, Software Agency..." class="w-full bg-primary border border-bordercolor rounded-2xl px-4 py-3.5 text-slate-100 focus:outline-none focus:border-blue-500 transition-all text-sm">
                     </div>
-                    <button onclick="generateNames()" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-3.5 rounded-2xl transition-all shadow-xl shadow-blue-600/20 active:scale-[0.99]">Suggest Brand Names</button>
+                    <button onclick="generateNames()" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-3.5 rounded-2xl transition-all shadow-xl shadow-blue-600/20">Suggest Brand Names</button>
                     <div id="name-result" class="hidden mt-4 p-5 bg-primary rounded-2xl border border-bordercolor text-slate-300 text-sm leading-relaxed"></div>
                 </div>
             </div>
@@ -112,7 +115,7 @@
                         <label class="block text-xs uppercase font-bold text-slate-400 mb-2 tracking-wider">Keyword</label>
                         <input type="text" id="hashtag-input" placeholder="e.g., DigitalMarketing, FitnessCoach, Travel..." class="w-full bg-primary border border-bordercolor rounded-2xl px-4 py-3.5 text-slate-100 focus:outline-none focus:border-blue-500 transition-all text-sm">
                     </div>
-                    <button onclick="generateHashtags()" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-3.5 rounded-2xl transition-all shadow-xl shadow-blue-600/20 active:scale-[0.99]">Generate Hashtags</button>
+                    <button onclick="generateHashtags()" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-3.5 rounded-2xl transition-all shadow-xl shadow-blue-600/20">Generate Hashtags</button>
                     <div id="hashtag-result" class="hidden mt-4 p-5 bg-primary rounded-2xl border border-bordercolor text-slate-300 text-sm leading-relaxed"></div>
                 </div>
             </div>
@@ -121,14 +124,14 @@
             <div id="tab-qr" class="tool-content hidden">
                 <div class="mb-6">
                     <h2 class="text-2xl font-bold flex items-center gap-2 text-blue-400"><i class="fa-solid fa-qrcode"></i> Instant QR Code Generator</h2>
-                    <p class="text-slate-400 text-sm mt-1">Convert any link, text, or WhatsApp contact into a clean QR code instantly.</p>
+                    <p class="text-slate-400 text-sm mt-1">Convert any link, text, or contact into a clean QR code instantly.</p>
                 </div>
                 <div class="space-y-4">
                     <div>
                         <label class="block text-xs uppercase font-bold text-slate-400 mb-2 tracking-wider">Website URL or Text</label>
                         <input type="text" id="qr-input" placeholder="https://example.com" class="w-full bg-primary border border-bordercolor rounded-2xl px-4 py-3.5 text-slate-100 focus:outline-none focus:border-blue-500 transition-all text-sm">
                     </div>
-                    <button onclick="generateQR()" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-3.5 rounded-2xl transition-all shadow-xl shadow-blue-600/20 active:scale-[0.99]">Generate QR Code</button>
+                    <button onclick="generateQR()" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-3.5 rounded-2xl transition-all shadow-xl shadow-blue-600/20">Generate QR Code</button>
                     <div id="qr-result" class="hidden mt-4 flex flex-col items-center justify-center p-6 bg-primary rounded-2xl border border-bordercolor">
                         <img id="qr-img" src="" alt="QR Code" class="rounded-xl shadow-lg max-w-[180px] bg-white p-2">
                         <span class="text-xs text-slate-400 mt-3">Scan with any mobile camera</span>
@@ -147,12 +150,60 @@
                         <label class="block text-xs uppercase font-bold text-slate-400 mb-2 tracking-wider">Paste Text Content</label>
                         <textarea id="summary-input" rows="4" placeholder="Paste your paragraph here..." class="w-full bg-primary border border-bordercolor rounded-2xl px-4 py-3.5 text-slate-100 focus:outline-none focus:border-blue-500 transition-all text-sm"></textarea>
                     </div>
-                    <button onclick="summarizeText()" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-3.5 rounded-2xl transition-all shadow-xl shadow-blue-600/20 active:scale-[0.99]">Summarize Now</button>
+                    <button onclick="summarizeText()" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-3.5 rounded-2xl transition-all shadow-xl shadow-blue-600/20">Summarize Now</button>
                     <div id="summary-result" class="hidden mt-4 p-5 bg-primary rounded-2xl border border-bordercolor text-slate-300 text-sm leading-relaxed"></div>
                 </div>
             </div>
 
-            <!-- Tool 6: Privacy Policy & AdSense Approval Page -->
+            <!-- Tool 6: AI Resume Reviewer -->
+            <div id="tab-resume" class="tool-content hidden">
+                <div class="mb-6">
+                    <h2 class="text-2xl font-bold flex items-center gap-2 text-blue-400"><i class="fa-solid fa-file-lines"></i> AI Resume Summary & Reviewer</h2>
+                    <p class="text-slate-400 text-sm mt-1">Paste your professional experience to get instant AI feedback and improvement tips.</p>
+                </div>
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-xs uppercase font-bold text-slate-400 mb-2 tracking-wider">Paste Resume Bio / Skills</label>
+                        <textarea id="resume-input" rows="4" placeholder="e.g., 3 years experience in sales, fleet management, client relations..." class="w-full bg-primary border border-bordercolor rounded-2xl px-4 py-3.5 text-slate-100 focus:outline-none focus:border-blue-500 transition-all text-sm"></textarea>
+                    </div>
+                    <button onclick="reviewResume()" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-3.5 rounded-2xl transition-all shadow-xl shadow-blue-600/20">Analyze Resume</button>
+                    <div id="resume-result" class="hidden mt-4 p-5 bg-primary rounded-2xl border border-bordercolor text-slate-300 text-sm leading-relaxed"></div>
+                </div>
+            </div>
+
+            <!-- Tool 7: AI Code Fixer / Explainer -->
+            <div id="tab-code" class="tool-content hidden">
+                <div class="mb-6">
+                    <h2 class="text-2xl font-bold flex items-center gap-2 text-blue-400"><i class="fa-solid fa-code"></i> AI Code Explainer & Fixer</h2>
+                    <p class="text-slate-400 text-sm mt-1">Analyze code snippets and discover quick bug fixes or optimizations.</p>
+                </div>
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-xs uppercase font-bold text-slate-400 mb-2 tracking-wider">Paste Code Snippet</label>
+                        <textarea id="code-input" rows="4" placeholder="e.g., function calculateSum(a, b) { return a + b; }" class="w-full bg-primary border border-bordercolor rounded-2xl px-4 py-3.5 text-slate-100 focus:outline-none focus:border-blue-500 transition-all text-sm font-mono"></textarea>
+                    </div>
+                    <button onclick="fixCode()" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-3.5 rounded-2xl transition-all shadow-xl shadow-blue-600/20">Review & Optimize Code</button>
+                    <div id="code-result" class="hidden mt-4 p-5 bg-primary rounded-2xl border border-bordercolor text-slate-300 text-sm leading-relaxed font-mono"></div>
+                </div>
+            </div>
+
+            <!-- Tool 8: AI Logo / Banner Prompt Generator -->
+            <div id="tab-prompt" class="tool-content hidden">
+                <div class="mb-6">
+                    <h2 class="text-2xl font-bold flex items-center gap-2 text-blue-400"><i class="fa-solid fa-image"></i> AI Logo & Art Prompt Generator</h2>
+                    <p class="text-slate-400 text-sm mt-1">Generate professional prompt concepts for Midjourney, DALL-E, or Canva AI.</p>
+                </div>
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-xs uppercase font-bold text-slate-400 mb-2 tracking-wider">Brand or Concept Idea</label>
+                        <input type="text" id="prompt-input" placeholder="e.g., Cyberpunk digital agency logo, minimal tech branding..." class="w-full bg-primary border border-bordercolor rounded-2xl px-4 py-3.5 text-slate-100 focus:outline-none focus:border-blue-500 transition-all text-sm">
+                    </div>
+                    <button onclick="generatePrompt()" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-3.5 rounded-2xl transition-all shadow-xl shadow-blue-600/20">Generate AI Prompts</button>
+                    <div id="prompt-result" class="hidden mt-4 p-5 bg-primary rounded-2xl border border-bordercolor text-slate-300 text-sm leading-relaxed"></div>
+                </div>
+            </div>
+
+            <!-- Tool 9: Privacy Policy & AdSense Approval Page -->
             <div id="tab-policy" class="tool-content hidden space-y-6">
                 <div>
                     <h2 class="text-2xl font-bold flex items-center gap-2 text-blue-400 mb-2"><i class="fa-solid fa-shield-halved"></i> Privacy Policy & Terms</h2>
@@ -182,94 +233,4 @@
                 <span onclick="switchTab('policy')" class="hover:text-slate-300 cursor-pointer">Privacy Policy</span>
                 <span onclick="switchTab('policy')" class="hover:text-slate-300 cursor-pointer">Terms of Service</span>
             </div>
-            <p class="text-slate-400 font-semibold">Developed by Nishant Joshi (MS Digital Services)</p>
-        </div>
-    </footer>
-
-    <!-- Core JavaScript Execution -->
-    <script>
-        function switchTab(tabName) {
-            document.querySelectorAll('.tool-content').forEach(el => el.classList.add('hidden'));
-            document.querySelectorAll('.tab-btn').forEach(btn => {
-                btn.classList.remove('bg-blue-600', 'text-white', 'shadow-lg', 'shadow-blue-600/30', 'border-transparent');
-                btn.classList.add('bg-cardbg', 'text-slate-300', 'border-bordercolor');
-            });
-
-            document.getElementById('tab-' + tabName).classList.remove('hidden');
-            const activeBtn = document.getElementById('btn-' + tabName);
-            if(activeBtn) {
-                activeBtn.classList.remove('bg-cardbg', 'text-slate-300', 'border-bordercolor');
-                activeBtn.classList.add('bg-blue-600', 'text-white', 'shadow-lg', 'shadow-blue-600/30');
-            }
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-
-        function generateCaption() {
-            const val = document.getElementById('caption-input').value.trim();
-            const res = document.getElementById('caption-result');
-            if(!val) { 
-                res.classList.remove('hidden');
-                res.innerHTML = "⚠️ Please type any topic or keyword above to generate captions!";
-                return; 
-            }
-            res.classList.remove('hidden');
-            res.innerHTML = `✨ <strong>AI Generated Viral Captions for "${val}":</strong><br><br>
-            1. Elevate your standard with ${val}! Absolute perfection tailored just for you. ✨ Book your experience today! #Trending #Global #${val.replace(/\s+/g, '')}<br><br>
-            2. Discover the ultimate transformation with ${val}. Quality you can trust, results you will love! 🔥 Drop a comment below for details. 👇<br><br>
-            3. Redefining excellence in ${val}. Don't just follow the trend, set it! 🚀`;
-        }
-
-        function generateNames() {
-            const val = document.getElementById('name-input').value.trim();
-            const res = document.getElementById('name-result');
-            if(!val) { 
-                res.classList.remove('hidden');
-                res.innerHTML = "⚠️ Please enter an industry niche!";
-                return; 
-            }
-            res.classList.0 = '';
-            res.classList.remove('hidden');
-            res.innerHTML = `💡 <strong>Top AI Brand Name Suggestions for "${val}":</strong><br><br>
-            • Apex ${val} Hub<br>• Nova${val} Labs<br>• PrimeWave ${val}<br>• EliteGrid ${val} Solutions<br>• Nexus ${val} Dynamics`;
-        }
-
-        function generateHashtags() {
-            const val = document.getElementById('hashtag-input').value.trim();
-            const res = document.getElementById('hashtag-result');
-            if(!val) { 
-                res.classList.remove('hidden');
-                res.innerHTML = "⚠️ Please enter a keyword for hashtags!";
-                return; 
-            }
-            res.classList.remove('hidden');
-            res.innerHTML = `🏷️ <strong>Trending Global Hashtags for "${val}":</strong><br><br>
-            #${val} #${val}Global #${val}Community #TrendingNow #ViralPost #TopRated #BusinessGrowth #ExplorePage #${val}Expert`;
-        }
-
-        function generateQR() {
-            const val = document.getElementById('qr-input').value.trim();
-            const res = document.getElementById('qr-result');
-            const img = document.getElementById('qr-img');
-            if(!val) { 
-                alert('Please enter a valid URL or text!'); 
-                return; 
-            }
-            res.classList.remove('hidden');
-            img.src = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(val)}`;
-        }
-
-        function summarizeText() {
-            const val = document.getElementById('summary-input').value.trim();
-            const res = document.getElementById('summary-result');
-            if(!val) { 
-                res.classList.remove('hidden');
-                res.innerHTML = "⚠️ Please paste some text content to summarize!";
-                return; 
-            }
-            res.classList.remove('hidden');
-            res.innerHTML = `📌 <strong>AI Summary Report:</strong><br><br>The submitted text highlights critical core objectives, emphasizing maximum productivity, streamlined efficiency, and strategic execution without redundant information.`;
-        }
-    </script>
-</body>
-    </html>
-
+            
