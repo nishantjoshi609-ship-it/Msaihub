@@ -126,7 +126,7 @@
                 <div class="space-y-4">
                     <div>
                         <label class="block text-xs uppercase font-bold text-slate-400 mb-2 tracking-wider">Website URL or Text</label>
-                        <input type="text" id="qr-input" placeholder="https://msaihub.vercel.app" class="w-full bg-primary border border-bordercolor rounded-2xl px-4 py-3.5 text-slate-100 focus:outline-none focus:border-blue-500 transition-all text-sm">
+                        <input type="text" id="qr-input" placeholder="https://example.com" class="w-full bg-primary border border-bordercolor rounded-2xl px-4 py-3.5 text-slate-100 focus:outline-none focus:border-blue-500 transition-all text-sm">
                     </div>
                     <button onclick="generateQR()" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-3.5 rounded-2xl transition-all shadow-xl shadow-blue-600/20 active:scale-[0.99]">Generate QR Code</button>
                     <div id="qr-result" class="hidden mt-4 flex flex-col items-center justify-center p-6 bg-primary rounded-2xl border border-bordercolor">
@@ -207,36 +207,53 @@
         function generateCaption() {
             const val = document.getElementById('caption-input').value.trim();
             const res = document.getElementById('caption-result');
-            if(!val) { alert('Please enter a topic or product!'); return; }
+            if(!val) { 
+                res.classList.remove('hidden');
+                res.innerHTML = "⚠️ Please type any topic or keyword above to generate captions!";
+                return; 
+            }
             res.classList.remove('hidden');
-            res.innerHTML = `✨ <strong>Optimized Captions for "${val}":</strong><br><br>
+            res.innerHTML = `✨ <strong>AI Generated Viral Captions for "${val}":</strong><br><br>
             1. Elevate your standard with ${val}! Absolute perfection tailored just for you. ✨ Book your experience today! #Trending #Global #${val.replace(/\s+/g, '')}<br><br>
-            2. Discover the ultimate transformation with ${val}. Quality you can trust, results you will love! 🔥 Drop a comment below for details. 👇`;
+            2. Discover the ultimate transformation with ${val}. Quality you can trust, results you will love! 🔥 Drop a comment below for details. 👇<br><br>
+            3. Redefining excellence in ${val}. Don't just follow the trend, set it! 🚀`;
         }
 
         function generateNames() {
             const val = document.getElementById('name-input').value.trim();
             const res = document.getElementById('name-result');
-            if(!val) { alert('Please enter an industry niche!'); return; }
+            if(!val) { 
+                res.classList.remove('hidden');
+                res.innerHTML = "⚠️ Please enter an industry niche!";
+                return; 
+            }
+            res.classList.0 = '';
             res.classList.remove('hidden');
-            res.innerHTML = `💡 <strong>Top Brand Name Suggestions for ${val}:</strong><br><br>
-            • Apex ${val} Hub<br>• Nova${val} Labs<br>• PrimeWave ${val}<br>• EliteGrid ${val} Solutions`;
+            res.innerHTML = `💡 <strong>Top AI Brand Name Suggestions for "${val}":</strong><br><br>
+            • Apex ${val} Hub<br>• Nova${val} Labs<br>• PrimeWave ${val}<br>• EliteGrid ${val} Solutions<br>• Nexus ${val} Dynamics`;
         }
 
         function generateHashtags() {
             const val = document.getElementById('hashtag-input').value.trim();
             const res = document.getElementById('hashtag-result');
-            if(!val) { alert('Please enter a keyword!'); return; }
+            if(!val) { 
+                res.classList.remove('hidden');
+                res.innerHTML = "⚠️ Please enter a keyword for hashtags!";
+                return; 
+            }
             res.classList.remove('hidden');
-            res.innerHTML = `🏷️ <strong>Trending Global Hashtags:</strong><br><br>
-            #${val} #${val}Global #${val}Community #TrendingNow #ViralPost #TopRated #BusinessGrowth #ExplorePage`;
+            res.innerHTML = `🏷️ <strong>Trending Global Hashtags for "${val}":</strong><br><br>
+            #${val} #${val}Global #${val}Community #TrendingNow #ViralPost #TopRated #BusinessGrowth #ExplorePage #${val}Expert`;
         }
 
         function generateQR() {
             const val = document.getElementById('qr-input').value.trim();
             const res = document.getElementById('qr-result');
             const img = document.getElementById('qr-img');
-            if(!val) { alert('Please enter a valid URL or text!'); return; }
+            if(!val) { 
+                alert('Please enter a valid URL or text!'); 
+                return; 
+            }
             res.classList.remove('hidden');
             img.src = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(val)}`;
         }
@@ -244,11 +261,15 @@
         function summarizeText() {
             const val = document.getElementById('summary-input').value.trim();
             const res = document.getElementById('summary-result');
-            if(!val) { alert('Please paste some text to summarize!'); return; }
+            if(!val) { 
+                res.classList.remove('hidden');
+                res.innerHTML = "⚠️ Please paste some text content to summarize!";
+                return; 
+            }
             res.classList.remove('hidden');
-            res.innerHTML = `📌 <strong>AI Summary Report:</strong><br><br>The submitted text outlines key strategic priorities, focusing efficiently on core performance metrics, quality assurance, and optimal execution without redundant details.`;
+            res.innerHTML = `📌 <strong>AI Summary Report:</strong><br><br>The submitted text highlights critical core objectives, emphasizing maximum productivity, streamlined efficiency, and strategic execution without redundant information.`;
         }
     </script>
 </body>
-  </html>
-  
+    </html>
+
